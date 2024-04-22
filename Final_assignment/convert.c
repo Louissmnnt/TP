@@ -12,7 +12,7 @@ int main() {
     clock_gettime(CLOCK_MONOTONIC, &start_time);
 
     double fahrenheit = (15.0 * 9.0 / 5.0) + 32.0;
-    console_print("%.2f Fahrenheit\n", fahrenheit);
+    printf("%.2f Fahrenheit\n", fahrenheit);
     
     // Obtient le temps de fin
     clock_gettime(CLOCK_MONOTONIC, &end_time);
