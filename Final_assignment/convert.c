@@ -5,13 +5,12 @@
 int main() {
     struct timespec start_time, end_time;
     long long elapsed_time_ns;
-    double celsius = 15.0;
-    double fahrenheit;
-
+    
     // Obtient le temps de début
     clock_gettime(CLOCK_MONOTONIC, &start_time);
-
-    double fahrenheit = (15.0 * 9.0 / 5.0) + 32.0;
+    double celsius = 15.0;
+    double fahrenheit;
+    fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
     printf("%.2f Fahrenheit\n", fahrenheit);
     
     // Obtient le temps de fin

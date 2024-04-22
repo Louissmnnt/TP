@@ -10,7 +10,10 @@ int main() {
     clock_gettime(CLOCK_MONOTONIC, &start_time);
 
     // Effectue la multiplication
-    long int result = 123456789123456789 * 987654321987654321;
+    long int num1 = 1234567890;
+    long int num2 = 9876543210;
+    long int result;
+    result = num1 * num2;
     printf("Result of the multiplication of is : %ld \n",result);
     
     // Obtient le temps de fin
