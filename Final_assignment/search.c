@@ -6,7 +6,8 @@
 int main() {
     struct timespec start_time, end_time;
     long long elapsed_time_ns;
-
+     // Obtient le temps de début
+    clock_gettime(CLOCK_MONOTONIC, &start_time);
     // Crée une liste de 50 éléments (nombres de 1 à 50)
     int arr[SIZE];
     for (int i = 0; i < SIZE; i++) {
@@ -16,8 +17,7 @@ int main() {
     // Élément à rechercher
     int key = 25;
 
-    // Obtient le temps de début
-    clock_gettime(CLOCK_MONOTONIC, &start_time);
+   
 
     // Fonction de recherche binaire
     int low = 0, high = SIZE - 1, mid;
@@ -33,7 +33,12 @@ int main() {
             high = mid - 1;
         }
     }
-
+    // Affiche le résultat de la recherche et le temps écoulé
+    if (found) {
+        printf("L'élément %d a été trouvé à l'index %d\n", key, mid);
+    } else {
+        printf("L'élément %d n'a pas été trouvé dans le tableau\n", key);
+    }
     // Obtient le temps de fin
     clock_gettime(CLOCK_MONOTONIC, &end_time);
 
@@ -41,12 +46,7 @@ int main() {
     elapsed_time_ns = (end_time.tv_sec - start_time.tv_sec) * 1000000000LL; // Conversion des secondes en nanosecondes
     elapsed_time_ns += end_time.tv_nsec - start_time.tv_nsec; // Ajoute les nanosecondes
 
-    // Affiche le résultat de la recherche et le temps écoulé
-    if (found) {
-        printf("L'élément %d a été trouvé à l'index %d\n", key, mid);
-    } else {
-        printf("L'élément %d n'a pas été trouvé dans le tableau\n", key);
-    }
+    
     printf("Temps d'exécution : %lld nanosecondes\n", elapsed_time_ns);
 
     return 0;
