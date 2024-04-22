@@ -4,17 +4,15 @@
 int main() {
     struct timespec start_time, end_time;
     long long elapsed_time_ns;
-    long int num1 = 123456789123456789;
-    long int num2 = 987654321987654321;
-    long int result;
+   
 
     // Obtient le temps de début
     clock_gettime(CLOCK_MONOTONIC, &start_time);
 
     // Effectue la multiplication
-    result = num1 * num2;
-    printf("Result of the multiplication of %ld by %ld is : %ld\n", num1, num2, result);
-
+    long int result = 123456789123456789 * 987654321987654321;
+    printf("Result of the multiplication of is : %ld \n",result);
+    
     // Obtient le temps de fin
     clock_gettime(CLOCK_MONOTONIC, &end_time);
 
