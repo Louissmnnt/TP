@@ -252,8 +252,8 @@ static void prvQueueReceiveTask( void * pvParameters )
     uint32_t ulReceivedValue;
     ( void ) pvParameters;
     for( ; ; )
-    { in the
-         * Blocked state. */
+    {
+        /* Blocked state. */
         xQueueReceive( xQueue, &ulReceivedValue, portMAX_DELAY );
         if( ulReceivedValue == mainVALUE_SENT_FROM_TASK1)  //Tache 1 executée si val1 recu dans la file d'attente
         {
