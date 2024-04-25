@@ -104,11 +104,11 @@
 
 /* The rate at which data is sent to the queue.  The times are converted from
  * milliseconds to ticks using the pdMS_TO_TICKS() macro. */
-#define mainTASK1_SEND_FREQUENCY_MS         pdMS_TO_TICKS( 18UL )
-#define mainTASK2_SEND_FREQUENCY_MS         pdMS_TO_TICKS( 60UL )
-#define mainTASK3_SEND_FREQUENCY_MS         pdMS_TO_TICKS( 36UL )
-#define mainTASK4_SEND_FREQUENCY_MS         pdMS_TO_TICKS( 12UL )
-#define mainTIMER_SEND_FREQUENCY_MS         pdMS_TO_TICKS( 18000UL )
+#define mainTASK1_SEND_FREQUENCY_MS         pdMS_TO_TICKS( 30UL )
+#define mainTASK2_SEND_FREQUENCY_MS         pdMS_TO_TICKS( 80UL )
+#define mainTASK3_SEND_FREQUENCY_MS         pdMS_TO_TICKS( 60UL )
+#define mainTASK4_SEND_FREQUENCY_MS         pdMS_TO_TICKS( 20UL )
+#define mainTIMER_SEND_FREQUENCY_MS         pdMS_TO_TICKS( 2400UL )
 
 /* The number of items the queue can hold at once. */
 #define mainQUEUE_LENGTH                   ( 5 )
