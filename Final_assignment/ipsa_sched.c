@@ -304,7 +304,7 @@ static void prvQueueReceiveTask( void * pvParameters )
 
         }else if( ulReceivedValue == mainVALUE_SENT_FROM_TIMER)
         {
-            console_print( "HyperPeriod reached \n" );
+            console_print( "HyperPeriod achieve \n" );
         }
         else 
         {
