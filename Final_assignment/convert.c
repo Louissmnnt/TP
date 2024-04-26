@@ -8,10 +8,10 @@ int main() {
     
     // Obtient le temps de début
     clock_gettime(CLOCK_MONOTONIC, &start_time);
-    double celsius = 15.0;
-    double fahrenheit;
-    fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
-    printf("%.2f Fahrenheit\n", fahrenheit);
+    double celsius;
+    double fahrenheit = 200;
+    celsius = (fahrenheit - 32.0) * 5.0 / 9.0;
+    console_print("%.2f Celcius\n", celcius)
     
     // Obtient le temps de fin
     clock_gettime(CLOCK_MONOTONIC, &end_time);
