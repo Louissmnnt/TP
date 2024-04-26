@@ -261,10 +261,10 @@ static void prvQueueReceiveTask( void * pvParameters )
         }
         else if( ulReceivedValue == mainVALUE_SENT_FROM_TASK2)//Tache 2 executée si val2 recu dans la file d'attente
         {
-            double celsius = 15.0;
-            double fahrenheit;
-            fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
-            console_print("%.2f Fahrenheit\n", fahrenheit);
+            double celsius;
+            double fahrenheit = 200;
+            celsius = (fahrenheit - 32.0) * 5.0 / 9.0;
+            console_print("%.2f Celcius\n", celcius);
     
         }else if( ulReceivedValue == mainVALUE_SENT_FROM_TASK3)//Tache 3 executée si val3 recu dans la file d'attente
         {   
